@@ -195,7 +195,29 @@
   }
 
   /* ── TIERS ── */
-  .tiers { background: var(--navy); color: #fff; }
+  /* ── LIFESTYLE STRIP ── */
+  .lifestyle-strip {
+    position: relative;
+    height: 580px;
+    overflow: hidden;
+  }
+  .lifestyle-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+  }
+
+  /* ── TIERS ── overlaps the lifestyle image */
+  .tiers {
+    background: rgba(45, 66, 72, 0.92);
+    color: #fff;
+    margin-top: -140px;
+    position: relative;
+    z-index: 2;
+    padding-top: 80px;
+  }
   .tiers h2 { font-family: 'Merriweather', serif; font-size: clamp(22px, 3vw, 34px); text-align: center; margin-bottom: 8px; }
   .tiers .sub { text-align: center; color: rgba(255,255,255,.65); font-size: 16px; margin-bottom: 52px; }
   .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; align-items: stretch; }
@@ -476,7 +498,8 @@
     .cta-group .btn-secondary { width: 100%; max-width: 320px; text-align: center; }
 
     /* Lifestyle image — shorter on mobile */
-    .lifestyle-strip { max-height: 260px; }
+    .lifestyle-strip { height: 320px; }
+    .tiers { margin-top: -80px; padding-top: 56px; }
   }
 </style>
 </head>
@@ -647,8 +670,8 @@
 </section>
 
 <!-- ══ LIFESTYLE STRIP ══ -->
-<div class="lifestyle-strip" style="width:100%;overflow:hidden;max-height:440px;">
-  <img src="over50-images/book-mockups.png" alt="The Over-50 Advantage book mockups" style="width:100%;display:block;object-fit:cover;object-position:center 30%;" />
+<div class="lifestyle-strip">
+  <img src="over50-images/book-mockups.png" alt="The Over-50 Advantage book mockups" />
 </div>
 
 <!-- ══ TIERS / ORDER ══ -->
